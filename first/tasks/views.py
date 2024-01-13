@@ -7,6 +7,7 @@ class NewTaskForm(forms.Form):
     task = forms.CharField(label="New Task")
 
 # Create your views here.
+# I have problem with the def index, because I need to show empty task list after each log in, but I don't know what to do.
 def index(request):
     tasks = request.session.get("tasks",[])
     request.session["tasks"] = []
